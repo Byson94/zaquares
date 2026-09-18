@@ -1,0 +1,17 @@
+[project]
+name = "zaquares"
+version = "0.1.0"
+description = "A research on Water Quality Assessment"
+readme = "README.md"
+authors = [
+    { name = "Byson94", email = "dev.byson94@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = []
+
+[project.scripts]
+simulation = "simulation:main"
+
+[build-system]
+requires = ["uv_build>=0.12.9,<0.13.0"]
+build-backend = "uv_build"
