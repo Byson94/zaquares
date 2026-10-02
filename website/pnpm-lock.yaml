@@ -8,9 +8,9 @@ importers:
 
   .:
     devDependencies:
-      '@sveltejs/adapter-netlify':
-        specifier: ^7.0.0
-        version: 7.0.0(@sveltejs/kit@3.0.0(@sveltejs/vite-plugin-svelte@7.3.1(svelte@5.57.1)(vite@8.3.1(jiti@2.7.0)))(svelte@5.57.1)(typescript@6.0.3)(vite@8.3.1(jiti@2.7.0)))
+      '@sveltejs/adapter-static':
+        specifier: ^4.0.0
+        version: 4.0.0(@sveltejs/kit@3.0.0(@sveltejs/vite-plugin-svelte@7.3.1(svelte@5.57.1)(vite@8.3.1(jiti@2.7.0)))(svelte@5.57.1)(typescript@6.0.3)(vite@8.3.1(jiti@2.7.0)))
       '@sveltejs/kit':
         specifier: ^3.0.0
         version: 3.0.0(@sveltejs/vite-plugin-svelte@7.3.1(svelte@5.57.1)(vite@8.3.1(jiti@2.7.0)))(svelte@5.57.1)(typescript@6.0.3)(vite@8.3.1(jiti@2.7.0))
@@ -68,10 +68,6 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
-
-  '@netlify/types@2.8.0':
-    resolution: {integrity: sha512-8/g0Pt6y6wXj5Ia5eeYLiXhRfWeqZXGXpGFeCiiQdUOem+FPtXdA4+YdGxqzWc7D0AvptKSO01KGeeVWHSu8Kg==}
-    engines: {node: ^18.14.0 || >=20}
 
   '@oxc-project/types@0.152.0':
     resolution: {integrity: sha512-oM/5rLBm2tPkg0iBgkH/FOeR3PCDpY19GTgAZjMFM8h9WI9VW7cLgzp6nwtarYKmovavIQZ+Fe/RKX/8C8O/Rw==}
@@ -186,8 +182,8 @@ packages:
     peerDependencies:
       acorn: ^8.9.0
 
-  '@sveltejs/adapter-netlify@7.0.0':
-    resolution: {integrity: sha512-r44Pt2ukAtYRa+gsYhyqNAL960umw6fUGvOYvPKccJSqOX74c5EgDbekR0nY9c55e2M3LWJ1ZcgMeSaslmjwbg==}
+  '@sveltejs/adapter-static@4.0.0':
+    resolution: {integrity: sha512-aF1J23R1ebKqUxQ4/qLr/Lxu63NFmLAtg8UZl3HFLxaoA1D/nhTVGcD9lTqx65iUbjNR2iOL0TgOxSX82x6Paw==}
     peerDependencies:
       '@sveltejs/kit': ^3.0.0-next.0
 
@@ -820,8 +816,6 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.6.0
 
-  '@netlify/types@2.8.0': {}
-
   '@oxc-project/types@0.152.0': {}
 
   '@polka/url@1.0.0-next.29': {}
@@ -879,11 +873,9 @@ snapshots:
     dependencies:
       acorn: 8.18.0
 
-  '@sveltejs/adapter-netlify@7.0.0(@sveltejs/kit@3.0.0(@sveltejs/vite-plugin-svelte@7.3.1(svelte@5.57.1)(vite@8.3.1(jiti@2.7.0)))(svelte@5.57.1)(typescript@6.0.3)(vite@8.3.1(jiti@2.7.0)))':
+  '@sveltejs/adapter-static@4.0.0(@sveltejs/kit@3.0.0(@sveltejs/vite-plugin-svelte@7.3.1(svelte@5.57.1)(vite@8.3.1(jiti@2.7.0)))(svelte@5.57.1)(typescript@6.0.3)(vite@8.3.1(jiti@2.7.0)))':
     dependencies:
-      '@netlify/types': 2.8.0
       '@sveltejs/kit': 3.0.0(@sveltejs/vite-plugin-svelte@7.3.1(svelte@5.57.1)(vite@8.3.1(jiti@2.7.0)))(svelte@5.57.1)(typescript@6.0.3)(vite@8.3.1(jiti@2.7.0))
-      rolldown: 1.2.12
 
   '@sveltejs/kit@3.0.0(@sveltejs/vite-plugin-svelte@7.3.1(svelte@5.57.1)(vite@8.3.1(jiti@2.7.0)))(svelte@5.57.1)(typescript@6.0.3)(vite@8.3.1(jiti@2.7.0))':
     dependencies:

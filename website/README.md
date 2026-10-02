@@ -15,7 +15,7 @@ To recreate this project with the same configuration:
 
 ```sh
 # recreate this project
-pnpm dlx sv@1.0.1 create --template minimal --types ts --add prettier tailwindcss="plugins:typography" sveltekit-adapter="adapter:netlify" mdsvex --install pnpm .
+pnpm dlx sv@1.0.1 create --template minimal --types ts --add prettier tailwindcss="plugins:typography" mdsvex sveltekit-adapter="adapter:static" --install pnpm .
 ```
 
 ## Adding features
