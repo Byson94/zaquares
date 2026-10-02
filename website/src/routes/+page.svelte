@@ -1,14 +1,15 @@
 <script>
-import NavBar from './components/NavBar.svelte';
-import Footer from './components/Footer.svelte';
+    import NavBar from './components/NavBar.svelte';
+    import Footer from './components/Footer.svelte';
+    import Area from './components/Area.svelte';
 
-import About from '#lib/about.md';
+    import About from '#lib/about.md';
 </script>
 
 <NavBar />
 
-<div class="prose max-w-[75vw] mx-auto">
+<Area>
     <About />
-</div>
+</Area>
 
 <Footer />
