@@ -1,2 +1,72 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
+
+@font-face {
+  font-family: "Geist";
+  src: url("/fonts/Geist-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT Serif";
+  src: url("/fonts/PTSerif-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT Serif";
+  src: url("/fonts/PTSerif-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "PT Serif", ui-serif, Georgia, serif;
+}
+
+@layer base {
+  h1, h2, h3 { font-family: var(--font-heading); }
+}
+
+:root {
+    --accent: #0f2e3d;
+    --accent2: #143d52;
+    --accent3: #204a60;
+    --background: #ffffff;
+
+    --text: #333333;
+    --text2: #999999;
+    --text3: #cccccc;
+    --text-gray: #7e7e7e;
+}
+
+.prose {
+    --tw-prose-body: var(--text);
+    --tw-prose-headings: var(--text);
+    --tw-prose-bold: var(--text);
+}
+
+.prose a {
+    font-weight: normal;
+    text-decoration: underline solid #999999 1px;
+    text-underline-offset: 5px;
+}
+
+.prose a:hover {
+    text-decoration-color: var(--text);
+}
+
+.navbar a {
+    color: var(--text2);
+    font-weight: 250;
+}
+.navbar a:hover {
+    color: var(--text3);
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+    font-family: var(--font-sans);
+}
