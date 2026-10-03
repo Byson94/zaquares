@@ -7,11 +7,19 @@ authors = [
     { name = "Byson94", email = "dev.byson94@gmail.com" }
 ]
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "scikit-learn>=1.9.1",
+    "xgboost-cpu>=3.4.1",
+]
 
 [project.scripts]
-simulation = "simulation:main"
+simulation = "zaquares.simulation:main"
+zape = "zaquares.zape:main"
 
 [build-system]
 requires = ["uv_build>=0.12.9,<0.13.0"]
 build-backend = "uv_build"
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
