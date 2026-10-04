@@ -7,7 +7,7 @@
 <NavBar />
 
 <Area>
-    <h1>Calculate WQI</h1>
+    <h1>Calculate WPI</h1>
 </Area>
 
 <Footer />
