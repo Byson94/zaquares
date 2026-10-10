@@ -5,6 +5,7 @@ build/
 dist/
 wheels/
 *.egg-info
+.wrangler/
 
 # Virtual environments
 .venv
