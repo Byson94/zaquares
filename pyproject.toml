@@ -24,3 +24,9 @@ build-backend = "uv_build"
 [tool.pyright]
 venvPath = "."
 venv = ".venv"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "pytest-csv-params>=2.3.1",
+]
