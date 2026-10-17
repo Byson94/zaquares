@@ -1,0 +1,165 @@
+Station,Data Acquisition Time,River_x,Basin_x,Tributary_x,WPI
+ARANGALI,11-04-2022 12:40,Periyar,West flowing rivers from Tadri to Kanyakumari,Chalakudy,4.036087864940384
+ARANGALI,21-04-2022 09:00,Periyar,West flowing rivers from Tadri to Kanyakumari,Chalakudy,2.932061557779093
+ARANGALI,02-05-2022 08:30,Periyar,West flowing rivers from Tadri to Kanyakumari,Chalakudy,1.7985127501524545
+ARANGALI,11-05-2022 08:30,Periyar,West flowing rivers from Tadri to Kanyakumari,Chalakudy,1.048660091942665
+ARANGALI,01-06-2022 08:00,Periyar,West flowing rivers from Tadri to Kanyakumari,Chalakudy,1.0122662836811998
+ARANGALI,13-06-2022 07:00,Periyar,West flowing rivers from Tadri to Kanyakumari,Chalakudy,1.754798368204888
+AYILAM ,21-04-2022 08:00,Vamanapuram,West flowing rivers from Tadri to Kanyakumari,-,3.348261751429405
+AYILAM ,01-06-2022 08:00,Vamanapuram,West flowing rivers from Tadri to Kanyakumari,-,5.738386145332711
+ERINJIPUZHA,21-03-2022 09:00,Payaswani,West flowing rivers from Tadri to Kanyakumari,-,7.612215735661266
+ERINJIPUZHA,01-04-2022 08:30,Payaswani,West flowing rivers from Tadri to Kanyakumari,-,6.599240398607861
+ERINJIPUZHA,11-04-2022 08:30,Payaswani,West flowing rivers from Tadri to Kanyakumari,-,4.356279092407036
+ERINJIPUZHA,21-04-2022 09:30,Payaswani,West flowing rivers from Tadri to Kanyakumari,-,1.880606239437114
+ERINJIPUZHA,02-05-2022 08:30,Payaswani,West flowing rivers from Tadri to Kanyakumari,-,5.6267988582858095
+ERINJIPUZHA,11-05-2022 09:00,Payaswani,West flowing rivers from Tadri to Kanyakumari,-,3.0032454411765883
+ERINJIPUZHA,01-06-2022 07:00,Payaswani,West flowing rivers from Tadri to Kanyakumari,-,3.6441065628909968
+KALAMPUR,21-03-2022 09:00,Muvattupuzha,West flowing rivers from Tapi to Tadri,Kaliyar,12.775558303463512
+KALAMPUR,01-04-2022 08:30,Muvattupuzha,West flowing rivers from Tapi to Tadri,Kaliyar,11.034352842899992
+KALAMPUR,11-04-2022 08:30,Muvattupuzha,West flowing rivers from Tapi to Tadri,Kaliyar,7.939153033721539
+KALAMPUR,21-04-2022 09:00,Muvattupuzha,West flowing rivers from Tapi to Tadri,Kaliyar,5.336726070434423
+KALAMPUR,02-05-2022 08:30,Muvattupuzha,West flowing rivers from Tapi to Tadri,Kaliyar,6.459291941740219
+KALAMPUR,11-05-2022 09:00,Muvattupuzha,West flowing rivers from Tapi to Tadri,Kaliyar,7.773761628329694
+KALAMPUR,01-06-2022 08:00,Muvattupuzha,West flowing rivers from Tapi to Tadri,Kaliyar,28.12813063239571
+KALAMPUR,13-06-2022 08:00,Muvattupuzha,West flowing rivers from Tapi to Tadri,Kaliyar,26.933498580769538
+KALLOOPPARA,11-04-2022 08:30,Pamba,West flowing rivers from Tadri to Kanyakumari,Manimala,22.45364614591449
+KALLOOPPARA,11-05-2022 09:30,Pamba,West flowing rivers from Tadri to Kanyakumari,Manimala,8.30094805398896
+KALLOOPPARA,01-06-2022 07:30,Pamba,West flowing rivers from Tadri to Kanyakumari,Manimala,1.769819981289217
+KALLOOPPARA,13-06-2022 08:00,Pamba,West flowing rivers from Tadri to Kanyakumari,Manimala,2.3708389508102528
+KARATHODU,01-06-2022 07:00,Kadalundi,West flowing rivers from Tadri to Kanyakumari,-,9.5358535753291
+KARATHODU,11-06-2022 08:00,Kadalundi,West flowing rivers from Tadri to Kanyakumari,-,9.001375633461052
+KIDANGOOR,21-03-2022 08:00,Meenachil,West flowing rivers from Tapi to Tadri,-,6.1302008872161196
+KIDANGOOR,01-04-2022 09:00,Meenachil,West flowing rivers from Tapi to Tadri,-,6.850143811011151
+KIDANGOOR,11-04-2022 09:00,Meenachil,West flowing rivers from Tapi to Tadri,-,3.7058855013530234
+KIDANGOOR,21-04-2022 08:30,Meenachil,West flowing rivers from Tapi to Tadri,-,5.785829764886671
+KIDANGOOR,02-05-2022 08:30,Meenachil,West flowing rivers from Tapi to Tadri,-,4.2537606392472895
+KIDANGOOR,11-05-2022 09:00,Meenachil,West flowing rivers from Tapi to Tadri,-,3.258005965259869
+KIDANGOOR,01-06-2022 08:00,Meenachil,West flowing rivers from Tapi to Tadri,-,5.9226427765044605
+KIDANGOOR,13-06-2022 08:00,Meenachil,West flowing rivers from Tapi to Tadri,-,4.588686152058543
+KUMBIDI,01-06-2022 06:30,Bharathapuzha,West flowing rivers from Tadri to Kanyakumari,-,72.43847606819297
+KUMBIDI,11-06-2022 09:00,Bharathapuzha,West flowing rivers from Tadri to Kanyakumari,-,53.558993227043295
+KUTTYADI,21-03-2022 08:30,Kuttyadi,West flowing rivers from Tadri to Kanyakumari,-,2.6156411470508516
+KUTTYADI,01-04-2022 09:30,Kuttyadi,West flowing rivers from Tadri to Kanyakumari,-,1.8723545410009166
+KUTTYADI,11-04-2022 09:00,Kuttyadi,West flowing rivers from Tadri to Kanyakumari,-,2.481170848861993
+KUTTYADI,21-04-2022 09:30,Kuttyadi,West flowing rivers from Tadri to Kanyakumari,-,4.704205393948953
+KUTTYADI,02-05-2022 09:30,Kuttyadi,West flowing rivers from Tadri to Kanyakumari,-,3.6264054397607453
+KUTTYADI,11-05-2022 09:00,Kuttyadi,West flowing rivers from Tadri to Kanyakumari,-,3.881960216353278
+KUTTYADI,01-06-2022 08:00,Kuttyadi,West flowing rivers from Tadri to Kanyakumari,-,2.7832890165960436
+KUTTYADI,11-06-2022 08:00,Kuttyadi,West flowing rivers from Tadri to Kanyakumari,-,3.933579937852585
+MADAMON,01-04-2022 08:30,Pamba,West flowing rivers from Tapi to Tadri,-,3.719193464907434
+MADAMON,11-04-2022 09:00,Pamba,West flowing rivers from Tapi to Tadri,-,3.5444402746677213
+MADAMON,21-04-2022 09:00,Pamba,West flowing rivers from Tapi to Tadri,-,2.1549522266111723
+MADAMON,02-05-2022 08:30,Pamba,West flowing rivers from Tapi to Tadri,-,1.8101194553504882
+MADAMON,11-05-2022 08:30,Pamba,West flowing rivers from Tapi to Tadri,-,2.191660798791702
+MADAMON,13-06-2022 08:00,Pamba,West flowing rivers from Tapi to Tadri,-,5.174074267860618
+MALAKKARA,11-04-2022 09:00,Pamba,West flowing rivers from Tapi to Tadri,-,3.2451361235027605
+MALAKKARA,21-04-2022 09:00,Pamba,West flowing rivers from Tapi to Tadri,-,2.14150436318333
+MALAKKARA,02-05-2022 08:00,Pamba,West flowing rivers from Tapi to Tadri,-,2.2056147162516027
+MALAKKARA,01-06-2022 07:30,Pamba,West flowing rivers from Tapi to Tadri,-,2.5291146234364703
+MALAKKARA,13-06-2022 07:30,Pamba,West flowing rivers from Tapi to Tadri,-,2.976375015430534
+MANAKKAD,21-03-2022 09:00,Muvattupuzha,West flowing rivers from Tadri to Kanyakumari,Thodupuzha,2.5255805544565533
+MANAKKAD,01-04-2022 09:30,Muvattupuzha,West flowing rivers from Tadri to Kanyakumari,Thodupuzha,19.613164078933195
+MANAKKAD,11-04-2022 08:30,Muvattupuzha,West flowing rivers from Tadri to Kanyakumari,Thodupuzha,3.562069152200607
+MANAKKAD,21-04-2022 09:00,Muvattupuzha,West flowing rivers from Tadri to Kanyakumari,Thodupuzha,6.301950721763845
+MANAKKAD,02-05-2022 08:30,Muvattupuzha,West flowing rivers from Tadri to Kanyakumari,Thodupuzha,2.7220022388039524
+MANAKKAD,11-05-2022 09:30,Muvattupuzha,West flowing rivers from Tadri to Kanyakumari,Thodupuzha,3.2101321501210265
+MANAKKAD,13-06-2022 09:02,Muvattupuzha,West flowing rivers from Tadri to Kanyakumari,Thodupuzha,3.7014755307977794
+MANKARA,21-03-2022 10:00,Bharathapuzha,West flowing rivers from Tadri to Kanyakumari,-,69.79769517174365
+MANKARA,01-04-2022 09:30,Bharathapuzha,West flowing rivers from Tadri to Kanyakumari,-,69.81824689553609
+MANKARA,11-04-2022 08:30,Bharathapuzha,West flowing rivers from Tadri to Kanyakumari,-,69.64350608262623
+MANKARA,21-04-2022 09:00,Bharathapuzha,West flowing rivers from Tadri to Kanyakumari,-,69.44076305631296
+MANKARA,02-05-2022 09:30,Bharathapuzha,West flowing rivers from Tadri to Kanyakumari,-,70.31887897328164
+MANKARA,11-05-2022 08:30,Bharathapuzha,West flowing rivers from Tadri to Kanyakumari,-,70.0009812913234
+MANKARA,01-06-2022 07:30,Bharathapuzha,West flowing rivers from Tadri to Kanyakumari,-,71.45659949392477
+MANKARA,13-06-2022 09:00,Bharathapuzha,West flowing rivers from Tadri to Kanyakumari,-,70.4672972671978
+MUTHANKERA,01-11-2024 09:00,Cauvery,Cauvery,Kabini,77.92674440970448
+MUTHANKERA,11-11-2024 09:00,Cauvery,Cauvery,Kabini,76.19868521109592
+MUTHANKERA,21-11-2024 09:05,Cauvery,Cauvery,Kabini,87.96782411805323
+MUTHANKERA,02-12-2024 09:00,Cauvery,Cauvery,Kabini,65.1365393935135
+MUTHANKERA,11-12-2024 09:30,Cauvery,Cauvery,Kabini,82.75670604806673
+MUTHANKERA,23-12-2024 09:00,Cauvery,Cauvery,Kabini,82.36320309897445
+MUTHANKERA,01-01-2025 09:00,Cauvery,Cauvery,Kabini,78.22675141185641
+MUTHANKERA,15-01-2025 09:00,Cauvery,Cauvery,Kabini,64.08781484927547
+MUTHANKERA,23-01-2025 09:00,Cauvery,Cauvery,Kabini,86.67786261856119
+MUTHANKERA,03-02-2025 09:00,Cauvery,Cauvery,Kabini,79.89100244631015
+MUTHANKERA,12-02-2025 09:00,Cauvery,Cauvery,Kabini,86.54312125689403
+MUTHANKERA,21-02-2025 21:00,Cauvery,Cauvery,Kabini,91.04443643548971
+MUTHANKERA,03-03-2025 09:00,Cauvery,Cauvery,Kabini,87.1225836436839
+MUTHANKERA,12-03-2025 08:30,Cauvery,Cauvery,Kabini,84.6554517946153
+MUTHANKERA,21-03-2025 09:00,Cauvery,Cauvery,Kabini,89.25655723815603
+NEELEESWARAM,21-03-2022 08:00,Periyar,West flowing rivers from Tadri to Kanyakumari,-,1.1873916946815655
+NEELEESWARAM,01-04-2022 08:30,Periyar,West flowing rivers from Tadri to Kanyakumari,-,1.1080021214469866
+NEELEESWARAM,11-04-2022 08:30,Periyar,West flowing rivers from Tadri to Kanyakumari,-,1.6181191659019305
+NEELEESWARAM,21-04-2022 08:30,Periyar,West flowing rivers from Tadri to Kanyakumari,-,3.862896464482745
+NEELEESWARAM,02-05-2022 09:00,Periyar,West flowing rivers from Tadri to Kanyakumari,-,1.3931215703598667
+NEELEESWARAM,11-05-2022 08:00,Periyar,West flowing rivers from Tadri to Kanyakumari,-,2.4073888530208336
+NEELEESWARAM,01-06-2022 08:00,Periyar,West flowing rivers from Tadri to Kanyakumari,-,7.805909428686732
+NELLIPPALLI,21-03-2022 09:00,Kallada,West flowing rivers from Tadri to Kanyakumari,-,1.9243263770491552
+NELLIPPALLI,01-04-2022 09:00,Kallada,West flowing rivers from Tadri to Kanyakumari,-,2.8521198530803247
+NELLIPPALLI,11-04-2022 09:00,Kallada,West flowing rivers from Tadri to Kanyakumari,-,2.9096591638269587
+NELLIPPALLI,21-04-2022 09:00,Kallada,West flowing rivers from Tadri to Kanyakumari,-,15.340452038387042
+NELLIPPALLI,02-05-2022 09:00,Kallada,West flowing rivers from Tadri to Kanyakumari,-,3.5561395974867622
+NELLIPPALLI,11-05-2022 09:00,Kallada,West flowing rivers from Tadri to Kanyakumari,-,4.132376131961109
+NELLIPPALLI,13-06-2022 08:00,Kallada,West flowing rivers from Tadri to Kanyakumari,-,15.090188524574486
+PALAKADAVU,11-04-2022 08:00,Sani,West flowing rivers from Tadri to Kanyakumari,-,1.2711129030651591
+PALAKADAVU,21-04-2022 08:45,Sani,West flowing rivers from Tadri to Kanyakumari,-,2.658624346816339
+PALAKADAVU,02-05-2022 08:00,Sani,West flowing rivers from Tadri to Kanyakumari,-,3.199134811880853
+PALAKADAVU,11-05-2022 09:30,Sani,West flowing rivers from Tadri to Kanyakumari,-,2.4397689911891973
+PALAKADAVU,13-06-2022 09:00,Sani,West flowing rivers from Tadri to Kanyakumari,-,3.03951077815357
+PATTAZHY,21-03-2022 08:00,Kallada,West flowing rivers from Tadri to Kanyakumari,-,3.912722292897172
+PATTAZHY,01-04-2022 09:30,Kallada,West flowing rivers from Tadri to Kanyakumari,-,2.0717272037991563
+PATTAZHY,11-04-2022 08:30,Kallada,West flowing rivers from Tadri to Kanyakumari,-,2.6790918899198175
+PATTAZHY,21-04-2022 08:30,Kallada,West flowing rivers from Tadri to Kanyakumari,-,3.3383140566891143
+PATTAZHY,02-05-2022 09:00,Kallada,West flowing rivers from Tadri to Kanyakumari,-,3.75586688776184
+PATTAZHY,11-05-2022 08:30,Kallada,West flowing rivers from Tadri to Kanyakumari,-,5.071951985005896
+PATTAZHY,01-06-2022 08:00,Kallada,West flowing rivers from Tadri to Kanyakumari,-,7.139364530717316
+PERUMANNU,21-03-2022 08:00,Valapatnam,West flowing rivers from Tadri to Kanyakumari,-,3.5600815436790754
+PERUMANNU,01-04-2022 08:30,Valapatnam,West flowing rivers from Tadri to Kanyakumari,-,4.16224613319045
+PERUMANNU,11-04-2022 08:00,Valapatnam,West flowing rivers from Tadri to Kanyakumari,-,3.3506942934546657
+PERUMANNU,21-04-2022 09:00,Valapatnam,West flowing rivers from Tadri to Kanyakumari,-,4.59965689364445
+PERUMANNU,02-05-2022 08:00,Valapatnam,West flowing rivers from Tadri to Kanyakumari,-,3.8742673887541628
+PERUMANNU,11-05-2022 09:00,Valapatnam,West flowing rivers from Tadri to Kanyakumari,-,2.121168875900196
+PERUMANNU,01-06-2022 08:00,Valapatnam,West flowing rivers from Tadri to Kanyakumari,-,4.044433602291136
+PERUMANNU,26-12-2022 08:00,Valapatnam,West flowing rivers from Tadri to Kanyakumari,-,2.349625408334788
+PUDUR,21-03-2022 09:00,Bharathapuzha,West flowing rivers from Tadri to Kanyakumari,Kannadipuzha,72.96722413336481
+PUDUR,01-04-2022 09:30,Bharathapuzha,West flowing rivers from Tadri to Kanyakumari,Kannadipuzha,71.55071853521116
+PUDUR,11-04-2022 09:30,Bharathapuzha,West flowing rivers from Tadri to Kanyakumari,Kannadipuzha,71.37761884318485
+PUDUR,21-04-2022 08:30,Bharathapuzha,West flowing rivers from Tadri to Kanyakumari,Kannadipuzha,70.74830363943903
+PUDUR,02-05-2022 09:00,Bharathapuzha,West flowing rivers from Tadri to Kanyakumari,Kannadipuzha,72.21615241958558
+PUDUR,11-05-2022 08:00,Bharathapuzha,West flowing rivers from Tadri to Kanyakumari,Kannadipuzha,70.80294675713102
+PUDUR,01-06-2022 07:00,Bharathapuzha,West flowing rivers from Tadri to Kanyakumari,Kannadipuzha,72.0319557293812
+PUDUR,13-06-2022 08:00,Bharathapuzha,West flowing rivers from Tadri to Kanyakumari,Kannadipuzha,71.0443439678016
+PULAMANTHOLE,21-03-2022 09:00,Bharathapuzha,West flowing rivers from Tadri to Kanyakumari,Pulanthodu,7.793472546766779
+PULAMANTHOLE,01-04-2022 08:30,Bharathapuzha,West flowing rivers from Tadri to Kanyakumari,Pulanthodu,14.159445300262036
+PULAMANTHOLE,11-04-2022 09:00,Bharathapuzha,West flowing rivers from Tadri to Kanyakumari,Pulanthodu,9.458784543340983
+PULAMANTHOLE,21-04-2022 08:30,Bharathapuzha,West flowing rivers from Tadri to Kanyakumari,Pulanthodu,15.21721769051915
+PULAMANTHOLE,02-05-2022 08:30,Bharathapuzha,West flowing rivers from Tadri to Kanyakumari,Pulanthodu,8.768821490966246
+PULAMANTHOLE,11-05-2022 09:00,Bharathapuzha,West flowing rivers from Tadri to Kanyakumari,Pulanthodu,2.962152502492657
+PULAMANTHOLE,01-06-2022 09:00,Bharathapuzha,West flowing rivers from Tadri to Kanyakumari,Pulanthodu,9.433085787052875
+RAMAMANGALAM,21-03-2022 08:00,Muvattupuzha,West flowing rivers from Tapi to Tadri,-,1.187704362023453
+RAMAMANGALAM,01-04-2022 09:00,Muvattupuzha,West flowing rivers from Tapi to Tadri,-,2.0112079790635136
+RAMAMANGALAM,11-04-2022 08:00,Muvattupuzha,West flowing rivers from Tapi to Tadri,-,2.2490347901105565
+RAMAMANGALAM,21-04-2022 08:30,Muvattupuzha,West flowing rivers from Tapi to Tadri,-,4.283437224331465
+RAMAMANGALAM,02-05-2022 08:30,Muvattupuzha,West flowing rivers from Tapi to Tadri,-,2.9271474931368857
+RAMAMANGALAM,11-05-2022 08:30,Muvattupuzha,West flowing rivers from Tapi to Tadri,-,3.2290331767823517
+RAMAMANGALAM,01-06-2022 07:30,Muvattupuzha,West flowing rivers from Tapi to Tadri,-,10.105032426872825
+RAMAMANGALAM,13-06-2022 07:30,Muvattupuzha,West flowing rivers from Tapi to Tadri,-,7.346604716507855
+THOTTATHINKADAVU,01-04-2022 08:30,Chaliyar,West flowing rivers from Tadri to Kanyakumari,Iruvazhinjipuzha,1.1432798180579198
+THOTTATHINKADAVU,11-04-2022 08:30,Chaliyar,West flowing rivers from Tadri to Kanyakumari,Iruvazhinjipuzha,1.4767488034500786
+THOTTATHINKADAVU,21-04-2022 09:00,Chaliyar,West flowing rivers from Tadri to Kanyakumari,Iruvazhinjipuzha,2.070715550599715
+THOTTATHINKADAVU,02-05-2022 09:00,Chaliyar,West flowing rivers from Tadri to Kanyakumari,Iruvazhinjipuzha,0.8493019967408202
+THOTTATHINKADAVU,11-05-2022 09:00,Chaliyar,West flowing rivers from Tadri to Kanyakumari,Iruvazhinjipuzha,3.106027161784681
+THUMPAMON,11-04-2022 09:00,Pamba,West flowing rivers from Tadri to Kanyakumari,Achankovil,2.694678348281272
+THUMPAMON,21-04-2022 09:00,Pamba,West flowing rivers from Tadri to Kanyakumari,Achankovil,5.94879476951381
+THUMPAMON,02-05-2022 08:00,Pamba,West flowing rivers from Tadri to Kanyakumari,Achankovil,3.3403455106909377
+THUMPAMON,11-05-2022 09:30,Pamba,West flowing rivers from Tadri to Kanyakumari,Achankovil,3.0004063890577584
+THUMPAMON,01-06-2022 09:00,Pamba,West flowing rivers from Tadri to Kanyakumari,Achankovil,8.901618472887506
+THUMPAMON,13-06-2022 08:00,Pamba,West flowing rivers from Tadri to Kanyakumari,Achankovil,6.412082656675182
+VANDIPERIYAR,21-03-2022 09:00,Periyar,West flowing rivers from Tadri to Kanyakumari,-,74.32880565580246
+VANDIPERIYAR,01-04-2022 09:00,Periyar,West flowing rivers from Tadri to Kanyakumari,-,48.93572274594191
+VANDIPERIYAR,11-04-2022 09:00,Periyar,West flowing rivers from Tadri to Kanyakumari,-,86.70402810084008
+VANDIPERIYAR,21-04-2022 08:30,Periyar,West flowing rivers from Tadri to Kanyakumari,-,50.601611325308696
+VANDIPERIYAR,02-05-2022 08:00,Periyar,West flowing rivers from Tadri to Kanyakumari,-,29.32092845759402
+VANDIPERIYAR,11-05-2022 08:30,Periyar,West flowing rivers from Tadri to Kanyakumari,-,12.070153598926211
+VANDIPERIYAR,01-06-2022 09:00,Periyar,West flowing rivers from Tadri to Kanyakumari,-,10.081293947247076
+VANDIPERIYAR,13-06-2022 07:00,Periyar,West flowing rivers from Tadri to Kanyakumari,-,7.761786289512969

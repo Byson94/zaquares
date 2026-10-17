@@ -8,14 +8,18 @@ authors = [
 ]
 requires-python = ">=3.14"
 dependencies = [
+    "matplotlib>=3.11.2",
+    "pandas>=3.0.6",
     "scikit-learn>=1.9.1",
     "xgboost-cpu>=3.4.1",
 ]
 
 [project.scripts]
-simulation = "zaquares.simulation:main"
-zape = "zaquares.zape:main"
 wpi = "zaquares.wpi:main"
+zape = "zaquares.zape:main"
+score_dataset = "zaquares.score_dataset:main"
+create_plots = "zaquares.create_plots:main"
+test_zape = "zaquares.test_zape:main"
 
 [build-system]
 requires = ["uv_build>=0.12.9,<0.13.0"]

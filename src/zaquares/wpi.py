@@ -2,7 +2,9 @@ import math
 
 def validate_domain(name, val, l, m):
     if val < l or val > m:
-        return ValueError(f"{name} out of [{l}, {m}] bounds")
+        raise ValueError(f"{name} out of [{l}, {m}] bounds")
+    else:
+        return val
 
 def score_pH(x):
     return 100 * (1 - abs((x - 7.5) / 7.5) ** 2) ** 4
@@ -70,7 +72,7 @@ def compute_from_raw(qarr):
     if not math.isclose(sum(WEIGHTS), 1.0):
         raise ValueError("bug: weights do not add up to 1")
 
-    return 100 - sum(wi * qi for wi, qi in zip(WEIGHTS, qarr))
+    return 100 - math.prod(max(qp, 1) ** wp for wp, qp in zip(WEIGHTS, qarr))
 
 def ComputeWPI(xpH, xDO, xNO3, xNH3, xCl, xTur, xEC, xT):
     qarr = [
@@ -91,8 +93,8 @@ def main():
 
     xpH = float(input("pH: "))
     xDO = float(input("DO: "))
-    xNO3 = float(input("NO3: "))
-    xNH3 = float(input("NH3: "))
+    xNO3 = float(input("NO3: ")) # Nitrate N
+    xNH3 = float(input("NH3: ")) # Ammonia N
     xCl = float(input("Cl: "))
     xTur = float(input("Tur: "))
     xEC = float(input("EC: "))
@@ -100,7 +102,7 @@ def main():
     print()
 
     score = ComputeWPI(xpH, xDO, xNO3, xNH3, xCl, xTur, xEC, xT)
-    print("Score:", round(score))
+    print("Score:", round(score, 2))
 
 if __name__ == "__main__":
     main()

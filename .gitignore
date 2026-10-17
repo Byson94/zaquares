@@ -6,6 +6,7 @@ dist/
 wheels/
 *.egg-info
 .wrangler/
+/zape.ubj
 
 # Virtual environments
 .venv
