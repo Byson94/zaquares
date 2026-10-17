@@ -5,13 +5,16 @@ import numpy as np
 import xgboost as xgb
 from zaquares.wpi import ComputeWPI
 
-def generate_data():
+PARAM_NAMES = ["pH", "DO", "NO3", "NH3", "Cl", "Tur", "EC", "T"]
+NAME_TO_IDX = {name: i for i, name in enumerate(PARAM_NAMES)}
+
+def generate_data(seed=58):
     # Range format: [min, max, center]
     # Order: pH, DO, NO3, NH3, Cl, Tur, EC, T
 
     high_ranges = [
         [2.0, 9.0, 7.0],
-        [2.0, 12.0, 7.0],
+        [3.0, 12.0, 8.0],
         [0.0, 25.0, 0.47],
         [0.0, 8.0, 0.05],
         [0.0, 50.0, 6.0],
@@ -25,8 +28,8 @@ def generate_data():
         [4.0, 11.0, 7.0],
         [0.0, 2.0, 0.47],
         [0.0, 0.5, 0.05],
-        [0.0, 10.0, 6.0],
-        [0.0, 15.0, 1.1],
+        [0.0, 20.0, 6.0],
+        [0.0, 25.0, 1.1],
         [0.0, 150.0, 52.1],
         [10.0, 32.0, 26.0]
     ]
@@ -56,13 +59,13 @@ def generate_data():
     X = []
     y = []
 
-    n_high = 400
-    n_mid = 800
-    n_low = 800
-    n_lowest = 400
+    n_high = 1500
+    n_mid = 2000
+    n_low = 2000
+    n_lowest = 1000
 
     # Determinisitic seed
-    random.seed(58)
+    random.seed(seed)
 
     # High (High WPI)
     for _ in range(n_high):
@@ -98,6 +101,23 @@ def analyze_data(data):
     for idx, param in enumerate(params):
         print(f"{param} -> {wpi[idx]}")
 
+def calibrate_per_param(model, alpha=0.10):
+    calibration_data = generate_data(seed=2819)
+    X_cal = np.array(calibration_data[0], dtype=np.float32)
+    y_cal = np.array(calibration_data[1], dtype=np.float32)
+
+    preds = model.predict(X_cal)
+    q_empty = float(np.quantile(np.abs(preds - y_cal), 1 - alpha))
+
+    q_by_param = {}
+    for p in range(len(PARAM_NAMES)):
+        Xm = X_cal.copy()
+        Xm[:, p] = np.nan
+        preds = model.predict(Xm)
+        q_by_param[p] = float(np.quantile(np.abs(preds - y_cal), 1 - alpha))
+
+    return q_empty, q_by_param
+
 def train():
     print("Generating data...")
     generated_data = generate_data()
@@ -105,13 +125,10 @@ def train():
     X = np.array(generated_data[0], dtype=np.float32)
     y = np.array(generated_data[1], dtype=np.float32)
 
-    param_names = ["pH", "DO", "NO3", "NH3", "Cl", "Tur", "EC", "T"]
-    name_to_idx = {name: i for i, name in enumerate(param_names)}
-    all_scenarios = []
-
     # Create every combination of missing parameters
-    for size in range(0, len(param_names)):
-        for combo in itertools.combinations(param_names, size):
+    all_scenarios = []
+    for size in range(0, len(PARAM_NAMES)):
+        for combo in itertools.combinations(PARAM_NAMES, size):
             all_scenarios.append(combo)
 
 
@@ -121,7 +138,7 @@ def train():
 
     print("Creating scenarios...")
     for scenario in all_scenarios:
-        cols = [name_to_idx[n] for n in scenario]
+        cols = [NAME_TO_IDX[n] for n in scenario]
         X_masked = X.copy()
         if cols:
             X_masked[:, cols] = np.nan
@@ -138,14 +155,19 @@ def train():
     # Train model
     print("Training model...")
     model = xgb.XGBRegressor(
-        n_estimators=200,
-        learning_rate=0.1,
+        n_estimators=300,
+        learning_rate=0.05,
         max_depth=4,
         subsample=0.8,
         objective="reg:squarederror",
     )
     model.fit(X_train, y_train)
     model.save_model("zape.ubj")
+
+    print("Calibrating...")
+    q_empty, q_by_param = calibrate_per_param(model, alpha=0.10)
+    q_array = np.array([q_empty] + [q_by_param[p] for p in range(len(PARAM_NAMES))])
+    np.save("zape_q.npy", q_array)
 
     return model
 
@@ -159,8 +181,17 @@ def get_model():
         print("[Starting training process]")
         return train()
 
+def get_calibration():
+    if os.path.isfile("zape_q.npy"):
+        print("[Loading calibration]")
+        q_array = np.load("zape_q.npy")
+        return q_array
+    else:
+        raise RuntimeError("'zape_q.npy' is missing. Is model properly trained?")
+
 def main():
     model = get_model()
+    calibration = get_calibration()
     
     xpH = float(input("pH: "))
     xDO = float(input("DO: "))
@@ -170,7 +201,7 @@ def main():
     xTur = float(input("Tur: "))
     xEC = float(input("EC: "))
     xT = float(input("T: "))
-    hide = [int(n) for n in input("Hide?: ").split(",")]
+    hide = [int(n) for n in input("Hide?: ").replace(" ", "").split(",") if n.strip().isdigit()]
     print()
 
     inputs = [xpH, xDO, xNO3, xNH3, xCl, xTur, xEC, xT]
@@ -185,10 +216,20 @@ def main():
             model_inputs[h] = np.nan
 
     data = np.array([model_inputs], dtype=np.float32)
+    cal_data = generate_data(seed=958)
     predicted = float(model.predict(data)[0])
+
+    q_empty = float(calibration[0])
+    q_by_param = {p: float(calibration[p + 1]) for p in range(len(PARAM_NAMES))}
+
+    if not hide:
+        q_hat = q_empty
+    else:
+        q_hat = float(np.sqrt(sum(q_by_param[p] ** 2 for p in hide)))
 
     print("Score    :", score)
     print("Predicted:", predicted)
+    print(f"90% Confidence: [{predicted - q_hat:.2f}, {predicted + q_hat:.2f}]")
     print("Abs error:", abs(predicted - score))
 
 if __name__ == "__main__":
