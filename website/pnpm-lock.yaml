@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@bubblyworld/xgboost-ts':
+        specifier: ^1.0.0
+        version: 1.0.0
     devDependencies:
       '@sveltejs/adapter-static':
         specifier: ^4.0.0
@@ -52,6 +56,9 @@ importers:
         version: 8.3.1(jiti@2.7.0)
 
 packages:
+
+  '@bubblyworld/xgboost-ts@1.0.0':
+    resolution: {integrity: sha512-U2A3t85ZLU1USOYkHTlO/+WQkqzSRuwVkKfGVPhHI94SJuWFY6Xh1v6qdVbf5mgf/AuCHKLwSH4xTM2uv6nJ6A==}
 
   '@jridgewell/gen-mapping@0.3.13':
     resolution: {integrity: sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA==}
@@ -796,6 +803,8 @@ packages:
     resolution: {integrity: sha512-msJxIvYDYcoNL+PJsu+7qmpDWsYmAxTY+2TNYXXF0hzBzBk0BMecOqDOG/EckUoKCuKwObfbugIl8QpqHDXeFA==}
 
 snapshots:
+
+  '@bubblyworld/xgboost-ts@1.0.0': {}
 
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:

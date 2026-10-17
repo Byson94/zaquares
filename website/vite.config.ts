@@ -3,6 +3,9 @@ import tailwindcss from '@tailwindcss/vite';
 import adapter from '@sveltejs/adapter-static';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
+import path from 'node:path';
+
+const pnpmStore = path.resolve('node_modules/.pnpm');
 
 export default defineConfig({
 	plugins: [
@@ -17,5 +20,10 @@ export default defineConfig({
 			preprocess: [mdsvex({ extensions: ['.svx', '.md'] })],
 			extensions: ['.svelte', '.svx', '.md']
 		})
-	]
+	],
+    server: {
+        fs: {
+            allow: [pnpmStore],
+        },
+    },
 });

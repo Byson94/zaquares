@@ -23,7 +23,7 @@
     <h1>Documents</h1>
     <div class="space-y-2">
         {#each data.posts as post}
-            <hr class="p-0! m-0! my-6! border-dark/10" />
+            <hr class="p-0! m-0! my-6! border-slate-300" />
             <a href="/docs/{post.slug}">
                 <div>
                     <h2
@@ -50,7 +50,7 @@
         {:else}
             <p>No documents found.</p>
         {/each}
-        <hr class="p-0! m-0! my-6! border-dark/10" />
+        <hr class="p-0! m-0! my-6! border-slate-300" />
     </div>
 </Area>
 
