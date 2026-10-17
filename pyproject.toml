@@ -20,6 +20,7 @@ zape = "zaquares.zape:main"
 score_dataset = "zaquares.score_dataset:main"
 create_plots = "zaquares.create_plots:main"
 test_zape = "zaquares.test_zape:main"
+deploy_model = "zaquares.deploy_model:main"
 
 [build-system]
 requires = ["uv_build>=0.12.9,<0.13.0"]
