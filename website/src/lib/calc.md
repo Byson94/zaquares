@@ -6,6 +6,6 @@ web interface:
 
 - [Calculate WPI from full parameters](/calculate/wpi)
 - [Estimate WPI from limited parameters (ML Model)](/calculate/estimate)
-- [Calculate WPI trajectory](/calculate/trajectory)
+- [Calculate WPI trajectory](/calculate/#)
 
 For more information on each WPI calculation, see [documents](/docs).
