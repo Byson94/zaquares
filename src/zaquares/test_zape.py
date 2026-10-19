@@ -1,10 +1,14 @@
+import os
 import itertools
 import numpy as np
+import pandas as pd
 from zaquares.zape import get_model
 from zaquares.score_dataset import parameter_score_relation
 
 PARAM_NAMES = ["pH", "DO", "NO3", "NH3", "Cl", "Tur", "EC", "T"]
 NAME_TO_IDX = {n: i for i, n in enumerate(PARAM_NAMES)}
+OUT_DIR = "data/zape"
+
 
 def mask(X, cols):
     Xm = X.copy()
@@ -15,8 +19,8 @@ def mask(X, cols):
 
 def evaluate(model, X, y, cols):
     pred = model.predict(mask(X, cols))
-    err = np.abs(pred - y)
-    return err.mean(), np.median(err), err.max()
+    return pred, np.abs(pred - y)
+
 
 def main():
     model = get_model()
@@ -31,48 +35,69 @@ def main():
 
     print(f"Test rows: {len(y_test)}\n")
 
-    # Baseline: no missing 
-    m, md, mx = evaluate(model, X_test, y_test, [])
-    print(f"{'no hidden':30s}  mean={m:7.4f}  median={md:7.4f}  max={mx:7.4f}")
+    # Handle 255 scenarios
+    summary, errors = [], []
+    sid = 0
+    for size in range(len(PARAM_NAMES)):
+        for combo in itertools.combinations(PARAM_NAMES, size):
+            cols = [NAME_TO_IDX[n] for n in combo]
+            pred, err = evaluate(model, X_test, y_test, cols)
 
-    # Each single feature hidden
+            row = {"scenario_id": sid, "size": size, "hidden": ";".join(combo)}
+            row.update({n: int(n in combo) for n in PARAM_NAMES})
+            row.update(mean=float(err.mean()),
+                       median=float(np.median(err)),
+                       max=float(err.max()))
+            summary.append(row)
+
+            errors.append(pd.DataFrame({
+                "scenario_id": sid,
+                "row": np.arange(len(y_test)),
+                "y_true": y_test,
+                "y_pred": pred,
+                "abs_err": err,
+            }))
+            sid += 1
+
+    df = pd.DataFrame(summary)
+    df_err = pd.concat(errors, ignore_index=True)
+
+    # Baseline
+    b = df[df["size"] == 0].iloc[0]
+    print(f"{'no hidden':30s}  mean={b['mean']:7.4f}  median={b['median']:7.4f}  max={b['max']:7.4f}")
+
+    # Single feature hidden
     print("\nSingle feature hidden:")
-    for name in PARAM_NAMES:
-        m, md, mx = evaluate(model, X_test, y_test, [NAME_TO_IDX[name]])
-        print(f"  {name:4s} hidden                     mean={m:7.4f}  median={md:7.4f}  max={mx:7.4f}")
+    for _, r in df[df["size"] == 1].iterrows():
+        print(f"  {r['hidden']:4s} hidden                     "
+              f"mean={r['mean']:7.4f}  median={r['median']:7.4f}  max={r['max']:7.4f}")
 
-    # Every combination, summarized by size
+    # By size
     print("\nAll subsets, by size:")
-    for size in range(0, 8):
-        means, medians, maxes = [], [], []
-        for combo in itertools.combinations(PARAM_NAMES, size):
-            cols = [NAME_TO_IDX[n] for n in combo]
-            m, md, mx = evaluate(model, X_test, y_test, cols)
-            means.append(m)
-            medians.append(md)
-            maxes.append(mx)
-        print(
-            f"  size={size}  n={len(means):3d}  "
-            f"mean(MAE)={np.mean(means):7.4f}  "
-            f"median(MAE)={np.median(means):7.4f}  "
-            f"worst MAE={np.max(means):7.4f}"
-        )
+    g = df.groupby("size")["mean"].agg(["count", "mean", "median", "max"])
+    for size, r in g.iterrows():
+        print(f"  size={size}  n={int(r['count']):3d}  "
+              f"mean(MAE)={r['mean']:7.4f}  "
+              f"median(MAE)={r['median']:7.4f}  "
+              f"worst MAE={r['max']:7.4f}")
 
+    # Extremes
+    ranked = df.sort_values("mean")
     print("\nExtremes across all 255 scenarios:")
-    results = []
-    for size in range(0, 8):
-        for combo in itertools.combinations(PARAM_NAMES, size):
-            cols = [NAME_TO_IDX[n] for n in combo]
-            m, md, mx = evaluate(model, X_test, y_test, cols)
-            results.append((m, md, combo))
-
-    results.sort(key=lambda r: r[0])
     print("  Best 5:")
-    for m, md, combo in results[:5]:
-        print(f"    {str(combo):40s}  mean={m:7.4f}  median={md:7.4f}")
+    for _, r in ranked.head(5).iterrows():
+        print(f"    {str(tuple(r['hidden'].split(';')) if r['hidden'] else ()):40s}  "
+              f"mean={r['mean']:7.4f}  median={r['median']:7.4f}")
     print("  Worst 5:")
-    for m, md, combo in results[-5:][::-1]:
-        print(f"    {str(combo):40s}  mean={m:7.4f}  median={md:7.4f}")
+    for _, r in ranked.tail(5).iloc[::-1].iterrows():
+        print(f"    {str(tuple(r['hidden'].split(';'))):40s}  "
+              f"mean={r['mean']:7.4f}  median={r['median']:7.4f}")
+
+    os.makedirs(OUT_DIR, exist_ok=True)
+    df.to_csv(f"{OUT_DIR}/test-results.csv", index=False)
+    df_err.to_csv(f"{OUT_DIR}/test-errors.csv", index=False)
+    print(f"\nSaved {OUT_DIR}/test-results.csv ({len(df)} rows)")
+    print(f"Saved {OUT_DIR}/test-errors.csv ({len(df_err)} rows)")
 
 
 if __name__ == "__main__":
