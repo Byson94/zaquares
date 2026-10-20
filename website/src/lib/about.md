@@ -1,11 +1,16 @@
 # Zaquares: A WPI Framework for Water Pollution Assessment, Estimation, and ROC Under Data Scarcity
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Zaquares is a Water Pollution Assessment framework. It defines a new Water Pollution Index which is extended with an AI/ML estimation
+model we created, as well as a rate of change of pollution calculator that helps identify the rate at which pollution changes.
 
-Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor.
+Our WPI utilizes a total of eight parameters, including, potential of Hydrogen (pH), Dissolved Oxygen, Nitrate N (mgN/L), 
+Ammonia N (mgN/L), Chloride (mg/L), Turbidity (NTU), Electric Conductivity (μS/cm), and Temperature (ºC), to score the pollution
+in a water body. The quality parameter aggregation equation of our WPI is based on geometric means, which makes it natively handle
+common issues indices face, such as the eclipsing problem.
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit consectetuer. Cras tellus. In pulvinar lectus a est. Curabitur eget orci. Cras laoreet ligula. Etiam sit amet dolor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam tellus diam, volutpat laoreet, vel, bibendum in, ante. Donec fringilla.
+Not everyone can obtain the listed 8 parameters for calculating the WPI. To combat this, we created an AI/ML model based on the
+XGBoost algorithm for estimating the WPI with limited parameters. From our testings, our model reliably works for cases when only 2-3 
+parameters are hidden from the model.
 
-Phasellus purus. Fusce commodo. Vestibulum convallis, lorem a tempus semper, dui dui euismod elit, vitae placerat urna tortor vitae lacus. Nullam libero mauris, consequat quis, varius et, dictum id, arcu. Mauris mollis tincidunt felis. Aliquam id ligula. Suspendisse potenti. In hac habitasse platea dictumst. Proin nonummy, enim in lacinia pulvinar, lectus tellus fringilla leo, non accumsan ante ante quis diam. Proin pede.
-
-Nam vestibulum accumsan nisl. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In hac habitasse platea dictumst. In est risus, auctor vitae, tempor sed, consequat sit amet, justo. In tincidunt. In tristique, risus ac sollicitudin dictum, arcu pede convallis risus, eget convallis magna dui quis lectus. Ut sit amet nibh ac dui hendrerit euismod. Aliquam rhoncus lectus iaculis magna. Proin convallis magna ut vel urna blandit placerat.
+The Rate of Change (ROC) model we created will contribute in tracking the rate at which the pollution score, WPI, changes using calculus.
+It returns a reliable vector unit of WPI change in a format such as, "+5 WPI/month", for convenience for all.
