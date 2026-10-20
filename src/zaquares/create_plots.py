@@ -7,14 +7,14 @@ def gen_ranked_dataset():
     df = pd.read_csv("data/wpi/wpi-scores.csv")
     result = (
         df.groupby("Station")
-            .agg(River=("River_x", "first"), WPI=("WPI", "median"))
+            .agg(River=("River_x", "first"), Tributary=("Tributary_x", "first"), WPI=("WPI", "median"))
             .sort_values("WPI", ascending=False)
             .reset_index()
     )
-    result = result.rename(columns={"River_x": "River"})
+    result = result.rename(columns={"River_x": "River", "Tributary_x": "Tributary"})
     result["WPI"] = result["WPI"].round(2)
 
-    fig, ax = plt.subplots(figsize=(6, 2))
+    fig, ax = plt.subplots(figsize=(6.5, 2))
     ax.axis("off")
 
     table = ax.table(
