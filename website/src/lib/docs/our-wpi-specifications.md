@@ -52,3 +52,11 @@ $$
 $$
 
 We are also considering using geometric means since it handles the eclipsing problem better, however, it will be explored when we reach the final phase of building the WPI definition.
+
+## Additional Information
+
+The weights are omitted in this document since we have not yet decided how it must be implemented. However, we currently plan on ranking DO, NH3, and NO3 as the top priority parameters and they might get the highest weights in production.
+
+## Conclusion
+
+This is our entier plan on implementing the WPI Definition. It is still very premature, however, we plan on iterating over it further to make it more suitable for our requirements.
